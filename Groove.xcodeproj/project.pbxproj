@@ -9,11 +9,12 @@
 /* Begin PBXBuildFile section */
 		501575BA1B6B030000672397 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501575B91B6B030000672397 /* AppDelegate.swift */; };
 		501575BD1B6B030000672397 /* Groove.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 501575BB1B6B030000672397 /* Groove.xcdatamodeld */; };
-		501575BF1B6B030000672397 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501575BE1B6B030000672397 /* ViewController.swift */; };
+		501575BF1B6B030000672397 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501575BE1B6B030000672397 /* RootViewController.swift */; };
 		501575C21B6B030000672397 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 501575C01B6B030000672397 /* Main.storyboard */; };
 		501575C41B6B030000672397 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 501575C31B6B030000672397 /* Images.xcassets */; };
 		501575C71B6B030000672397 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 501575C51B6B030000672397 /* LaunchScreen.xib */; };
 		501575D31B6B030000672397 /* GrooveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501575D21B6B030000672397 /* GrooveTests.swift */; };
+		501575DF1B6B090700672397 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501575DE1B6B090700672397 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,13 +32,14 @@
 		501575B81B6B030000672397 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		501575B91B6B030000672397 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		501575BC1B6B030000672397 /* Groove.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Groove.xcdatamodel; sourceTree = "<group>"; };
-		501575BE1B6B030000672397 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		501575BE1B6B030000672397 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		501575C11B6B030000672397 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		501575C31B6B030000672397 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		501575C61B6B030000672397 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		501575CC1B6B030000672397 /* GrooveTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GrooveTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		501575D11B6B030000672397 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		501575D21B6B030000672397 /* GrooveTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrooveTests.swift; sourceTree = "<group>"; };
+		501575DE1B6B090700672397 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,7 +82,8 @@
 			isa = PBXGroup;
 			children = (
 				501575B91B6B030000672397 /* AppDelegate.swift */,
-				501575BE1B6B030000672397 /* ViewController.swift */,
+				501575BE1B6B030000672397 /* RootViewController.swift */,
+				501575DE1B6B090700672397 /* LoginViewController.swift */,
 				501575C01B6B030000672397 /* Main.storyboard */,
 				501575C31B6B030000672397 /* Images.xcassets */,
 				501575C51B6B030000672397 /* LaunchScreen.xib */,
@@ -215,7 +218,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				501575BF1B6B030000672397 /* ViewController.swift in Sources */,
+				501575DF1B6B090700672397 /* LoginViewController.swift in Sources */,
+				501575BF1B6B030000672397 /* RootViewController.swift in Sources */,
 				501575BA1B6B030000672397 /* AppDelegate.swift in Sources */,
 				501575BD1B6B030000672397 /* Groove.xcdatamodeld in Sources */,
 			);
