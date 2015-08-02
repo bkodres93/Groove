@@ -11,23 +11,25 @@ import UIKit
 class LoginViewController: UIViewController {
 
     override func viewDidAppear(animated: Bool) {
-        let alert = UIAlertController(title: "Hello!", message: "Login to groove", preferredStyle: UIAlertControllerStyle.Alert)
-        alert.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default, handler: { action in
+        super.viewDidAppear(animated)
+        if FBSDKAccessToken.currentAccessToken() != nil {
             let rvc = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("NavigationController") as! UINavigationController
-            self.presentViewController(rvc, animated: true, completion: nil)
-        }))
-        presentViewController(alert, animated: true, completion: nil)
+            self.presentViewController(rvc, animated: false, completion: nil)
+        }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let loginButton = FBSDKLoginButton(frame: CGRectMake(0, 0, 250, 50))
+        loginButton.center = self.view.center
+        loginButton.delegate = self
+        view.addSubview(loginButton)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 
     /*
     // MARK: - Navigation
@@ -39,4 +41,30 @@ class LoginViewController: UIViewController {
     }
     */
 
+}
+
+extension LoginViewController: FBSDKLoginButtonDelegate {
+    func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!) {
+        if let error = error {
+            println(error.localizedDescription)
+            let alert = UIAlertController(title: "Login Error", message: "Could not login to facebook.", preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(
+                title: "Dismiss",
+                style: UIAlertActionStyle.Default,
+                handler: { action in
+                    let rvc = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("NavigationController") as! UINavigationController
+                    self.presentViewController(rvc, animated: true, completion: nil)
+                })
+            )
+            presentViewController(alert, animated: true, completion: nil)
+            return
+        }
+        
+        let rvc = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("NavigationController") as! UINavigationController
+        presentViewController(rvc, animated: true, completion: nil)
+    }
+    
+    func loginButtonDidLogOut(loginButton: FBSDKLoginButton!) {
+        // logout handled elsewhere
+    }
 }
