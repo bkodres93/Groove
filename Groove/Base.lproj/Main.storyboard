@@ -25,7 +25,20 @@
                             <outlet property="delegate" destination="L9R-Zp-EQG" id="Idh-55-g9R"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="My Tracks" id="vrT-PF-ZhE"/>
+                    <navigationItem key="navigationItem" title="My Tracks" id="vrT-PF-ZhE">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="XSV-Fy-bD3">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="QB9-B7-iaC">
+                                <rect key="frame" x="535" y="7" width="50" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Logout">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="logoutTapped:forEvent:" destination="L9R-Zp-EQG" eventType="touchUpInside" id="eat-eD-8t5"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yeg-cT-S3X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

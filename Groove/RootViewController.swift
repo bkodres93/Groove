@@ -12,7 +12,7 @@ class RootViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         let alert = UIAlertController(title: "Hello!", message: "Ready to groove", preferredStyle: UIAlertControllerStyle.Alert)
         alert.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Destructive, handler: nil))
         presentViewController(alert, animated: true, completion: {
@@ -24,6 +24,13 @@ class RootViewController: UITableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    @IBAction func logoutTapped(sender: UIButton, forEvent event: UIEvent) {
+        let loginManager = FBSDKLoginManager()
+        loginManager.logOut()
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+
 
 }
 
